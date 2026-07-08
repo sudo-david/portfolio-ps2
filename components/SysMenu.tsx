@@ -93,12 +93,14 @@ export default function SysMenu() {
               <div className="max-w-[560px] text-base leading-relaxed space-y-3.5">
                 <p>
                   Me gusta aprender construyendo, cada proyecto es una oportunidad para resolver
-                  un problema diferente y entender cómo funciona el software detrás de escena.
+                  un problema diferente y entender cómo funciona el software detrás de escena. <br />
+                  <br />
 
                   He trabajado con tecnologías web robustas, bases de datos relacionales, IAs y
                   teniendo un enfoque centrado en la experiencia del usuario y la funcionalidad, siempre con el objetivo de crear aplicaciones
-                  bien estructuradas.
-
+                  bien estructuradas. <br />
+                  <br />
+                      
                   Mi interés está en el desarrollo Full Stack, donde puedo participar en todo el
                   proceso: desde el diseño de la aplicación hasta la lógica que lo impulsa.
                   Actualmente continúo ampliando mis conocimientos y conocimientos mientras
@@ -110,9 +112,9 @@ export default function SysMenu() {
                 </p>
                 <p>
                   Actualmente ampliando mi stack hacia <strong className="text-ps2-chrome">Java</strong>, {" "}
-                  <strong className="text-ps2-chrome">Spring Boot</strong>,
+                  <strong className="text-ps2-chrome">Spring Boot</strong>, {" "}
                   <strong className="text-ps2-chrome">Android</strong>, {" "}
-                  <strong className="text-ps2-chrome">Docker</strong>,
+                  <strong className="text-ps2-chrome">Docker</strong>
 
                 </p>
               </div>
