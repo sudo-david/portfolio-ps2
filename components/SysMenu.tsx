@@ -106,7 +106,7 @@ export default function SysMenu() {
                   experiencia del usuario y en aplicaciones bien estructuradas.
                 </p>
                 <p>
-                  Mi interés está en el desarrollo full stack — participar en todo el proceso, desde el diseño de
+                  Mi interés está en el desarrollo full stack y participar en todo el proceso, desde el diseño de
                   la aplicación hasta la lógica que la impulsa. Soy un creyente de que el aprendizaje nunca
                   termina: la curiosidad me lleva a explorar nuevas tecnologías y metodologías que aporten valor
                   real a los proyectos en los que trabajo.
@@ -124,19 +124,21 @@ export default function SysMenu() {
 
         {active === "skills" && (
           <div className="ps2-panel">
-            <h2 className="font-orbitron text-sm tracking-wider text-ps2-cyan mb-5">// STACK TÉCNICO</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              {skills.map((s) => (
-                <div key={s.name} className="border border-ps2-panelBorder rounded-xl p-3.5 bg-[rgba(0,29,61,0.55)]">
-                  <div className="flex justify-between text-sm mb-2">
-                    <span>{s.name}</span>
-                    <span className="font-orbitron text-[10px] text-ps2-cyanDim">
-                      {s.level === "core" ? "CORE" : "EN CURSO"}
-                    </span>
-                  </div>
-                  <div className="bar-track">
-                    <div className="bar-fill-anim" style={{ width: `${s.pct}%` }} />
-                  </div>
+            <h2 className="font-orbitron text-sm tracking-wider text-ps2-cyan mb-6">// STACK TÉCNICO</h2>
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
+              {skills.map((s, i) => (
+                <div
+                  key={s.name}
+                  className="skill-badge flex flex-col items-center gap-2.5 border border-ps2-panelBorder rounded-2xl py-5 px-2 bg-[rgba(0,29,61,0.5)] transition-shadow hover:shadow-[0_0_22px_rgba(90,200,250,0.3)] hover:border-ps2-cyan"
+                  style={{ animationDelay: `${(i % 5) * 0.35}s` }}
+                >
+                  <img
+                    src={`https://skillicons.dev/icons?i=${s.icon}`}
+                    alt={s.name}
+                    className="w-9 h-9"
+                    loading="lazy"
+                  />
+                  <span className="text-xs text-center text-ps2-text">{s.name}</span>
                 </div>
               ))}
             </div>

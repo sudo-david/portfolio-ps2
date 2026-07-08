@@ -2,19 +2,20 @@ export type Skill = {
   name: string;
   level: "core" | "learning";
   pct: number;
+  icon: string;
 };
 
 export const skills: Skill[] = [
-  { name: "Python", level: "core", pct: 92 },
-  { name: "Flask", level: "core", pct: 88 },
-  { name: "Next.js", level: "core", pct: 85 },
-  { name: "React", level: "core", pct: 85 },
-  { name: "MySQL", level: "core", pct: 88 },
-  { name: "JavaScript", level: "core", pct: 90 },
-  { name: "Tailwind CSS", level: "core", pct: 80 },
-  { name: "Git", level: "core", pct: 82 },
-  { name: "Java", level: "learning", pct: 40 },
-  { name: "Spring Boot", level: "learning", pct: 35 },
+  { name: "Python", level: "core", pct: 92, icon: "python" },
+  { name: "Flask", level: "core", pct: 88, icon: "flask" },
+  { name: "Next.js", level: "core", pct: 85, icon: "nextjs" },
+  { name: "React", level: "core", pct: 85, icon: "react" },
+  { name: "MySQL", level: "core", pct: 88, icon: "mysql" },
+  { name: "JavaScript", level: "core", pct: 90, icon: "js" },
+  { name: "Tailwind CSS", level: "core", pct: 80, icon: "tailwind" },
+  { name: "Git", level: "core", pct: 82, icon: "git" },
+  { name: "Java", level: "learning", pct: 40, icon: "java" },
+  { name: "Spring Boot", level: "learning", pct: 35, icon: "spring" },
 ];
 
 export type Project = {
