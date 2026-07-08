@@ -52,8 +52,9 @@ export default function SysMenu() {
             onClick={() => setActive(key)}
             role="tab"
             aria-selected={active === key}
-            className={`sysicon flex flex-col items-center gap-3 font-orbitron text-[11px] tracking-wider transition-colors ${active === key ? "text-ps2-chrome active" : "text-ps2-muted"
-              }`}
+            className={`sysicon flex flex-col items-center gap-3 font-orbitron text-[11px] tracking-wider transition-colors ${
+              active === key ? "text-ps2-chrome active" : "text-ps2-muted"
+            }`}
           >
             <span className="capsule">{ICONS[key]}</span>
             {LABELS[key]}
@@ -67,8 +68,15 @@ export default function SysMenu() {
             <h2 className="font-orbitron text-sm tracking-wider text-ps2-cyan mb-5">// PERFIL</h2>
             <div className="flex flex-col sm:flex-row gap-8 items-start">
               <div className="shrink-0 mx-auto sm:mx-0">
-                <div className="w-36 h-36 rounded-full p-1 bg-gradient-to-br from-ps2-cyan/60 to-ps2-cyanDim/20 shadow-[0_0_30px_rgba(90,200,250,0.25)]">
-                  <div className="w-full h-full rounded-full overflow-hidden bg-[rgba(0,10,25,0.6)] flex items-center justify-center border border-ps2-panelBorder">
+                <div className="relative w-36 h-36">
+                  <div
+                    className="avatar-ring absolute -inset-1 rounded-full"
+                    style={{
+                      background:
+                        "conic-gradient(from 0deg, var(--cyan) 0deg, transparent 70deg, var(--cyan) 140deg, transparent 210deg, var(--cyan) 280deg, transparent 340deg, var(--cyan) 360deg)",
+                    }}
+                  />
+                  <div className="absolute inset-0 rounded-full overflow-hidden bg-[rgba(0,10,25,0.6)] flex items-center justify-center border border-ps2-panelBorder shadow-[0_0_24px_rgba(90,200,250,0.2)]">
                     {/* Reemplaza esta imagen: coloca tu foto en /public/avatar.png */}
                     <img
                       src="/avatar.png"
@@ -92,30 +100,22 @@ export default function SysMenu() {
 
               <div className="max-w-[560px] text-base leading-relaxed space-y-3.5">
                 <p>
-                  Me gusta aprender construyendo, cada proyecto es una oportunidad para resolver
-                  un problema diferente y entender cómo funciona el software detrás de escena. <br />
-                  <br />
-
-                  He trabajado con tecnologías web robustas, bases de datos relacionales, IAs y
-                  teniendo un enfoque centrado en la experiencia del usuario y la funcionalidad, siempre con el objetivo de crear aplicaciones
-                  bien estructuradas. <br />
-                  <br />
-                      
-                  Mi interés está en el desarrollo Full Stack, donde puedo participar en todo el
-                  proceso: desde el diseño de la aplicación hasta la lógica que lo impulsa.
-                  Actualmente continúo ampliando mis conocimientos y conocimientos mientras
-                  desarrollo proyectos que fortalecen mis habilidades como ingeniero de software.
+                  Me gusta aprender construyendo: cada proyecto es una oportunidad para resolver un problema
+                  distinto y entender cómo funciona el software por dentro. He trabajado con tecnologías web
+                  robustas, bases de datos relacionales e inteligencia artificial, siempre con foco en la
+                  experiencia del usuario y en aplicaciones bien estructuradas.
                 </p>
                 <p>
-                  Fiel creyente de que el aprendizaje nunca acaba y que la curiosidad es el motor de la innovación, siempre estoy buscando nuevas tecnologías y
-                  metodologías para mejorar mis habilidades y aportar valor a los proyectos en los que participo.
+                  Mi interés está en el desarrollo full stack — participar en todo el proceso, desde el diseño de
+                  la aplicación hasta la lógica que la impulsa. Soy un creyente de que el aprendizaje nunca
+                  termina: la curiosidad me lleva a explorar nuevas tecnologías y metodologías que aporten valor
+                  real a los proyectos en los que trabajo.
                 </p>
                 <p>
-                  Actualmente ampliando mi stack hacia <strong className="text-ps2-chrome">Java</strong>, {" "}
-                  <strong className="text-ps2-chrome">Spring Boot</strong>, {" "}
-                  <strong className="text-ps2-chrome">Android</strong>, {" "}
-                  <strong className="text-ps2-chrome">Docker</strong>
-
+                  Actualmente ampliando mi stack hacia <strong className="text-ps2-chrome">Java</strong>,{" "}
+                  <strong className="text-ps2-chrome">Spring Boot</strong>,{" "}
+                  <strong className="text-ps2-chrome">Android</strong> y{" "}
+                  <strong className="text-ps2-chrome">Docker</strong>.
                 </p>
               </div>
             </div>
