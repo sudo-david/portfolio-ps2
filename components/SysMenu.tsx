@@ -52,9 +52,8 @@ export default function SysMenu() {
             onClick={() => setActive(key)}
             role="tab"
             aria-selected={active === key}
-            className={`sysicon flex flex-col items-center gap-3 font-orbitron text-[11px] tracking-wider transition-colors ${
-              active === key ? "text-ps2-chrome active" : "text-ps2-muted"
-            }`}
+            className={`sysicon flex flex-col items-center gap-3 font-orbitron text-[11px] tracking-wider transition-colors ${active === key ? "text-ps2-chrome active" : "text-ps2-muted"
+              }`}
           >
             <span className="capsule">{ICONS[key]}</span>
             {LABELS[key]}
@@ -93,20 +92,28 @@ export default function SysMenu() {
 
               <div className="max-w-[560px] text-base leading-relaxed space-y-3.5">
                 <p>
-                  Ingeniería de Sistemas en fase de cierre de mis estudios técnicos, con la mira puesta en un
-                  programa tecnológico de mayor nivel. Mi enfoque es el desarrollo full stack de punta a punta:
-                  desde el diseño de esquemas de bases de datos relacionales hasta la construcción de interfaces
-                  claras y responsivas.
+                  Me gusta aprender construyendo, cada proyecto es una oportunidad para resolver
+                  un problema diferente y entender cómo funciona el software detrás de escena.
+
+                  He trabajado con tecnologías web robustas, bases de datos relacionales, IAs y
+                  teniendo un enfoque centrado en la experiencia del usuario y la funcionalidad, siempre con el objetivo de crear aplicaciones
+                  bien estructuradas.
+
+                  Mi interés está en el desarrollo Full Stack, donde puedo participar en todo el
+                  proceso: desde el diseño de la aplicación hasta la lógica que lo impulsa.
+                  Actualmente continúo ampliando mis conocimientos y conocimientos mientras
+                  desarrollo proyectos que fortalecen mis habilidades como ingeniero de software.
                 </p>
                 <p>
-                  Me interesa especialmente resolver problemas de integración entre sistemas — donde backend,
-                  frontend y datos tienen que funcionar como una sola pieza — y disfruto tanto la lógica detrás de
-                  una arquitectura sólida como el detalle visual de una buena interfaz.
+                  Fiel creyente de que el aprendizaje nunca acaba y que la curiosidad es el motor de la innovación, siempre estoy buscando nuevas tecnologías y
+                  metodologías para mejorar mis habilidades y aportar valor a los proyectos en los que participo.
                 </p>
                 <p>
-                  Actualmente ampliando mi stack hacia <strong className="text-ps2-chrome">Java</strong> y{" "}
-                  <strong className="text-ps2-chrome">Spring Boot</strong>, buscando una base más sólida en
-                  desarrollo backend orientado a objetos.
+                  Actualmente ampliando mi stack hacia <strong className="text-ps2-chrome">Java</strong>, {" "}
+                  <strong className="text-ps2-chrome">Spring Boot</strong>,
+                  <strong className="text-ps2-chrome">Android</strong>, {" "}
+                  <strong className="text-ps2-chrome">Docker</strong>,
+
                 </p>
               </div>
             </div>
