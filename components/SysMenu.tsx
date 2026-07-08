@@ -52,8 +52,9 @@ export default function SysMenu() {
             onClick={() => setActive(key)}
             role="tab"
             aria-selected={active === key}
-            className={`sysicon flex flex-col items-center gap-3 font-orbitron text-[11px] tracking-wider transition-colors ${active === key ? "text-ps2-chrome active" : "text-ps2-muted"
-              }`}
+            className={`sysicon flex flex-col items-center gap-3 font-orbitron text-[11px] tracking-wider transition-colors ${
+              active === key ? "text-ps2-chrome active" : "text-ps2-muted"
+            }`}
           >
             <span className="capsule">{ICONS[key]}</span>
             {LABELS[key]}
@@ -64,34 +65,53 @@ export default function SysMenu() {
       <div className="min-h-[340px] pb-16">
         {active === "about" && (
           <div className="ps2-panel">
-            <h2 className="font-orbitron text-sm tracking-wider text-ps2-cyan mb-5">
-        // PERFIL
-            </h2>
+            <h2 className="font-orbitron text-sm tracking-wider text-ps2-cyan mb-5">// PERFIL</h2>
+            <div className="flex flex-col sm:flex-row gap-8 items-start">
+              <div className="shrink-0 mx-auto sm:mx-0">
+                <div className="w-36 h-36 rounded-full p-1 bg-gradient-to-br from-ps2-cyan/60 to-ps2-cyanDim/20 shadow-[0_0_30px_rgba(90,200,250,0.25)]">
+                  <div className="w-full h-full rounded-full overflow-hidden bg-[rgba(0,10,25,0.6)] flex items-center justify-center border border-ps2-panelBorder">
+                    {/* Reemplaza esta imagen: coloca tu foto en /public/avatar.png */}
+                    <img
+                      src="/avatar.png"
+                      alt="David Duque Vélez"
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        (e.currentTarget as HTMLImageElement).style.display = "none";
+                        const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                        if (fallback) fallback.style.display = "flex";
+                      }}
+                    />
+                    <div className="hidden w-full h-full items-center justify-center text-ps2-muted">
+                      <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.5} className="w-14 h-14 stroke-current">
+                        <circle cx="12" cy="8" r="3.4" />
+                        <path d="M5 20c0-4 3.2-6.5 7-6.5s7 2.5 7 6.5" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-            <div className="max-w-[640px] text-base leading-relaxed space-y-3.5">
-              <p>
-                Soy un desarrollador de software en formación con un enfoque práctico.
-                Disfruto convertir ideas en aplicaciones funcionales y aprender
-                enfrentando problemas reales. Mis proyectos me han permitido trabajar
-                con tecnologías como{" "}
-                <strong className="text-ps2-chrome">Java</strong>,{" "}
-                <strong className="text-ps2-chrome">Android</strong>, bases de datos
-                relacionales, APIs y geolocalización.
-              </p>
-
-              <p>
-                Me interesa el desarrollo <strong className="text-ps2-chrome">Full Stack</strong>{" "}
-                porque combina lógica, arquitectura y experiencia de usuario.
-                Actualmente estoy profundizando en{" "}
-                <strong className="text-ps2-chrome">Java</strong> y{" "}
-                <strong className="text-ps2-chrome">Spring Boot</strong>, mientras
-                continúo desarrollando proyectos personales que me permitan seguir
-                creciendo como ingeniero de software.
-              </p>
+              <div className="max-w-[560px] text-base leading-relaxed space-y-3.5">
+                <p>
+                  Ingeniería de Sistemas en fase de cierre de mis estudios técnicos, con la mira puesta en un
+                  programa tecnológico de mayor nivel. Mi enfoque es el desarrollo full stack de punta a punta:
+                  desde el diseño de esquemas de bases de datos relacionales hasta la construcción de interfaces
+                  claras y responsivas.
+                </p>
+                <p>
+                  Me interesa especialmente resolver problemas de integración entre sistemas — donde backend,
+                  frontend y datos tienen que funcionar como una sola pieza — y disfruto tanto la lógica detrás de
+                  una arquitectura sólida como el detalle visual de una buena interfaz.
+                </p>
+                <p>
+                  Actualmente ampliando mi stack hacia <strong className="text-ps2-chrome">Java</strong> y{" "}
+                  <strong className="text-ps2-chrome">Spring Boot</strong>, buscando una base más sólida en
+                  desarrollo backend orientado a objetos.
+                </p>
+              </div>
             </div>
           </div>
         )}
-
 
         {active === "skills" && (
           <div className="ps2-panel">
