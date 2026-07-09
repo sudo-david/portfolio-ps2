@@ -60,12 +60,12 @@ export const projects: Project[] = [
     name: "NEXUS",
     subtitle: "Red social · Proyecto de bases de datos",
     summary:
-      "Red social con estética cyberpunk, construida como proyecto de bases de datos, con autenticación segura y arquitectura Blueprint.",
+      "NEXUS es una red social web orientada a desarrolladores.",
     description:
       "NEXUS es una red social con estética cyberpunk construida como proyecto de curso de bases de datos. Incluye un sistema completo de solicitudes de amistad, notificaciones, y autenticación segura, sustentado ante evaluación oral.",
     challenges: [
-      "Diseñar un esquema relacional normalizado para relaciones de amistad bidireccionales",
-      "Responder preguntas orales sobre JOINs complejos durante la sustentación",
+      "Diseñar esquemas relacionales normalizado para relaciones de amistad bidireccionales",
+      "Realizar una identidad visual propia para permitir a los usuarios diferenciarse de otras redes sociales",
       "Organizar el backend con Flask Blueprints para mantener el código modular",
     ],
     learnings: [
