@@ -42,6 +42,7 @@ const LABELS: Record<PanelKey, string> = {
 
 export default function SysMenu() {
   const [active, setActive] = useState<PanelKey>("about");
+  const [spinning, setSpinning] = useState(false);
 
   return (
     <>
@@ -68,7 +69,7 @@ export default function SysMenu() {
             <h2 className="font-orbitron text-sm tracking-wider text-ps2-cyan mb-5">// PERFIL</h2>
             <div className="flex flex-col sm:flex-row gap-8 items-start">
               <div className="shrink-0 mx-auto sm:mx-0">
-                <div className="relative w-36 h-36">
+                <div className="relative w-36 h-36" style={{ perspective: "600px" }}>
                   <div
                     className="avatar-ring absolute -inset-1 rounded-full"
                     style={{
@@ -77,11 +78,16 @@ export default function SysMenu() {
                     }}
                   />
                   <div className="absolute inset-0 rounded-full overflow-hidden bg-[rgba(0,10,25,0.6)] flex items-center justify-center border border-ps2-panelBorder shadow-[0_0_24px_rgba(90,200,250,0.2)]">
-                    {/* Reemplaza esta imagen: coloca tu foto en /public/avatar.png */}
+                    {/* Reemplaza esta imagen: coloca tu foto en /public/avatar.jpg */}
                     <img
                       src="/avatar.png"
                       alt="David Duque Vélez"
-                      className="w-full h-full object-cover"
+                      className={`avatar-photo w-full h-full object-cover ${spinning ? "spinning" : ""}`}
+                      onClick={() => {
+                        if (spinning) return;
+                        setSpinning(true);
+                        setTimeout(() => setSpinning(false), 700);
+                      }}
                       onError={(e) => {
                         (e.currentTarget as HTMLImageElement).style.display = "none";
                         const fallback = e.currentTarget.nextElementSibling as HTMLElement;
@@ -106,7 +112,7 @@ export default function SysMenu() {
                   experiencia del usuario y en aplicaciones bien estructuradas.
                 </p>
                 <p>
-                  Mi interés está en el desarrollo full stack y participar en todo el proceso, desde el diseño de
+                  Mi interés está en el desarrollo full stack — participar en todo el proceso, desde el diseño de
                   la aplicación hasta la lógica que la impulsa. Soy un creyente de que el aprendizaje nunca
                   termina: la curiosidad me lleva a explorar nuevas tecnologías y metodologías que aporten valor
                   real a los proyectos en los que trabajo.
