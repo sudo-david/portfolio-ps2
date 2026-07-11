@@ -42,7 +42,7 @@ const LABELS: Record<PanelKey, string> = {
 
 export default function SysMenu() {
   const [active, setActive] = useState<PanelKey>("about");
-  const [spinning, setSpinning] = useState(false);
+  const [scanning, setScanning] = useState(false);
 
   return (
     <>
@@ -78,15 +78,15 @@ export default function SysMenu() {
                     }}
                   />
                   <div className="absolute inset-0 rounded-full overflow-hidden bg-[rgba(0,10,25,0.6)] flex items-center justify-center border border-ps2-panelBorder shadow-[0_0_24px_rgba(90,200,250,0.2)]">
-                    {/* Reemplaza esta imagen: coloca tu foto en /public/avatar.jpg */}
+                    {/* Reemplaza esta imagen: coloca tu foto en /public/avatar.png */}
                     <img
                       src="/avatar.png"
                       alt="David Duque Vélez"
-                      className={`avatar-photo w-full h-full object-cover ${spinning ? "spinning" : ""}`}
+                      className="avatar-photo w-full h-full object-cover"
                       onClick={() => {
-                        if (spinning) return;
-                        setSpinning(true);
-                        setTimeout(() => setSpinning(false), 700);
+                        if (scanning) return;
+                        setScanning(true);
+                        setTimeout(() => setScanning(false), 700);
                       }}
                       onError={(e) => {
                         (e.currentTarget as HTMLImageElement).style.display = "none";
@@ -100,6 +100,7 @@ export default function SysMenu() {
                         <path d="M5 20c0-4 3.2-6.5 7-6.5s7 2.5 7 6.5" />
                       </svg>
                     </div>
+                    <div className={`scan-overlay ${scanning ? "active" : ""}`} />
                   </div>
                 </div>
               </div>
